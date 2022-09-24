@@ -9,8 +9,7 @@
   - Multiply `null` by a number and not get an error
   - Multiply `undefined` by a number and not get an error
   - You can access properties that don't exist on an object without getting an error
-  - 
-- These can cause unintended errors if not caught
+  - These can cause unintended errors if not caught
 <br>
 
 - JS was not built to be the major language it is today, it was supposed to be a small scripting language for the browser
