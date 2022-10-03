@@ -32,6 +32,8 @@
 
 - If we are setting a variable right after we declare it, TS can just figure out what type it is.
   - Ex:
+
+
 ```ts
 let x = 24; // TS will know that x is of type number;
 ```

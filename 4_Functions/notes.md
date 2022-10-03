@@ -4,6 +4,7 @@
 
 - Same rules apply as do for variable type annotation
   - Ex:
+
 ```ts
 function square(num: number){
   return num * num;
@@ -31,6 +32,8 @@ function greet(name: string = "Mya"){
 - For declared it will go after the arguments
 - Helps with function readability as well
   - Ex:
+
+
 ```ts
   function add(x: number, y: number):number {
     return x + y;
@@ -45,6 +48,8 @@ function greet(name: string = "Mya"){
 
 - TS can infer types of anonymous functions parameters
   - Ex:
+
+
 ```ts
 const colors = ['red', 'blue'];
 
@@ -56,6 +61,8 @@ colors.forEach( color => console.log(color)); // TS will know that color is of t
 - 'void' is a return type for functions that don't return anything.
 - TS can infer this pretty well, but sometimes you may want to be explicit.
 - Ex:
+
+
 ```ts
   const noReturn = (nothing: string):void => console.log(nothing);
 ```
@@ -65,6 +72,8 @@ colors.forEach( color => console.log(color)); // TS will know that color is of t
 - The never type represents values that **NEVER** occur.
 - We might use the never type to annotate a function that never finishes, or always throws an exception.
 - Ex:
+
+
 ```ts
   function makeError(msg: string): never {
     throw new Error(msg);
