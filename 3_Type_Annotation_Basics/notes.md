@@ -4,10 +4,16 @@
 
 - To assign a **type**, just add `:Type` after the variable name.
   - Ex: 
-      - `const variableName: string = 'wow I'm a string!';`
+
+```ts
+const variableName: string = 'wow I'm a string!';
+```
 
 - Syntax:
-      - `let myVar: type = value;`
+
+```ts
+let myVar: type = value;`
+```
 
 - **All types are _lowercase_**
 
@@ -15,7 +21,10 @@
 
 - Numbers are just still numbers, as they are in JS
   - Ex: 
-    - `let myNum: number = 41;`
+
+```ts
+let myNum: number = 41;
+```
 
 - Boolean
   - Ex:
