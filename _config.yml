@@ -1,10 +1,15 @@
+
+theme: jekyll-theme-modernist
+
 plugins:
   - jekyll-relative-links
 relative_links:
   enabled: true
   collections: true
 include:
+  - CONTRIBUTING.md
   - README.md
-remote_theme: pages-themes/hacker@v0.2.0
-plugins:
-- jekyll-remote-theme
+  - notes.md 
+  - links.md
+  - Steps_To_Follow.md
+  - index.md
