@@ -1,6 +1,9 @@
 ﻿# Mastering TypeScript
 
 - Notes on Mastering TypeScript Udemy Course by Colt Steele
+<br>
+
+Site: [LINK](https://kellen-linse.github.io/TypeScript_Notes/)
 
 ## Contents:
 
