@@ -2,7 +2,7 @@
 
 ### Working with Object Types
 
-- Objects can be typed by declaring what the object should look like in the annotation.
+- Objects can be typed by declaring what the object should look like in the **annotation**.
 - Accessing a property that is not defined or performing operations without keeping types in mind will throw an error.
 - We can define what an object should look like when it is passed in to a function inside of the function parameters
 
@@ -33,31 +33,35 @@ function makeCoodinate(inX: number, inY: number): {x: number, y: number}{
 
 ### Excess Properties
 
-- When you define an object literal as a function parameter, when you **pass in an object literal, it CAN'T have more properties and methods** that you defined ahead of time. 
-  - You can't add anything in addition to them.
-- But when you **pass in an object as a variable it CAN have more properties and methods** on it.
+- When you define an object literal as a function parameter, when you pass in an **object literal**, it **CAN'T have more properties and methods** that you defined ahead of time. 
+  - You can't add anything in addition to the pre-defined properties and methods.
+- But when you pass in an **object as a variable** it **CAN have more properties and methods** on it.
+- Example:
 
 ```ts
 function printName(person: {first: string, last: string}):void {
   console.log(person.first);
 }
 
-printName({first: 'Mya', last: 'Linse', age: 11}); // <------ THIS WILL THROW AN ERROR!
+printName({first: 'Mya', last: 'Linse', age: 11}); // <------ THIS WILL THROW AN ERROR! (age is extra)
 
 const myaStats = {first: 'Mya', last: 'Linse', age: 11};
 
-printName(myaStats); // <----------- THIS WILL NOT THROW AN ERROR
+printName(myaStats); // <----------- THIS WILL NOT THROW AN ERROR (even tho age is extra)
+
+// They just decided it would be this way when they made TS, just remember it works this way.
 ```
 
 ### Type Alias
 
 - Instead of writing out object types in an annotation, we can declare them separately in a **type alias**, which is simply the desired shape of the object.
   - This us to make the code more reusable and more readable.
-- Convention is that the Type Alias is **Uppercase**.
+- We declare a type alias with the `type` keyword.
+- Convention is that the type alias starts with an **Uppercase** letter.
 
 ```ts
 // A type alias
-type Cat = {
+type Cat = { // <----------- notice the 'type' keyword and the uppercase C in cat
   name: string;
   age: number;
 }
@@ -88,7 +92,7 @@ type Song = {
 
 ### Optional Properties
 
-- you can add a ? after the property name and before the colon to make that property optional.
+- you can **add a `?` after the property name** and before the colon to make that property optional.
 - Ex:
 
 ```ts
@@ -115,12 +119,12 @@ const user1: User = {
   userName: 'MyaMooCow';
 }
 
-user1.id = 234234; // This will throw a readonly error.
+user1.id = 234234; // <-------- This will throw a "readonly" error.
 ```
 
 ### Intersection Types
 
-- We can combine types using the & symbol.
+- We can **combine** types using the **`&`** symbol.
 - Ex:
 
 ```ts
@@ -132,9 +136,9 @@ type Color = {
   color: string;
 }
 
-type ColorfulCircle = Circle & Color;
+type ColorfulCircle = Circle & Color; //<----------- notice the use of the & symbol
 
-const greenCircle: ColorfulCircle = {
+const greenCircle: ColorfulCircle = { // <------ Here we have properties of both Circle and Color objects.
   radius: 4,
   color: 'green'
 }
@@ -143,7 +147,7 @@ const greenCircle: ColorfulCircle = {
 - We can also add on other properties
 
 ```ts
-type ColorfulCircleAndMore = Circle & Color & { some: string };
+type ColorfulCircleAndMore = Circle & Color & { some: string }; // <---- Here we have added some other property 
 
 const greenCircle: ColorfulCircleAndMore = {
   radius: 4,
