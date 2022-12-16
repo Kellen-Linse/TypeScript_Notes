@@ -2,7 +2,7 @@
 
 ### Working with Array Types 
 
-- `let varName: arrayType[] = [];
+- `let varName: arrayType[] = [];`
 - Arrays can be typed using a type annotation followed by empty array brackets, like `number[]` for an array of numbers.
 
 ```ts
